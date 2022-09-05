@@ -179,8 +179,44 @@ li {
 
 /* location */
 
+.hero__location{
+    position: relative;
+    height: 85rem;
+
+}
+
+.location__article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
 .location__title{
     color: #C93A36;
     font-size: 5rem;
     text-align: center;
+    margin-bottom: 5rem;
+}
+
+.location-content__text{
+    color: #C93A36;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+.location__map{
+    width: 50%;
+    z-index: 9999;
+}
+
+.location__text{
+    width: 60%;
+}
+
+.vector__wave{
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
 }
