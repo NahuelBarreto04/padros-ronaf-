@@ -34,16 +34,19 @@ form.addEventListener("submit", (e) => {
         heroContact
       );
     } else {
-      emailjs.sendForm(serviceId, templateId, form).then(
-        function () {
-          console.log("SUCCESS!");
-          createAlert("Mensaje Enviado ✅", heroContact);
-          setSession("already");
-        },
-        function (error) {
-          createAlert("Error, Intenta más tarde ❌", heroContact);
-        }
-      );
+      createAlert("Mensaje Enviado ✅", heroContact);
+      createAlert("Error, Intenta más tarde ❌", heroContact);
+
+      // emailjs.sendForm(serviceId, templateId, form).then(
+      //   function () {
+      //     console.log("SUCCESS!");
+      //     createAlert("Mensaje Enviado ✅", heroContact);
+      //     setSession("already");
+      //   },
+      //   function (error) {
+      //     createAlert("Error, Intenta más tarde ❌", heroContact);
+      //   }
+      // );
     }
     form.reset();
     resetInputs(inputName, inputEmail, inputMensagge);
