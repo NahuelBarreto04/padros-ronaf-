@@ -2,10 +2,14 @@ const form = document.forms.formContact;
 const inputName = form.elements.userName;
 const inputEmail = form.elements.userEmail;
 const inputMensagge = form.elements.userMessagge;
-console.log(inputName, inputEmail, inputMensagge);
+const barsContainer = document.querySelector(".burguer-container");
+const menuBars = document.querySelector(".icon-bars");
+const menu = document.querySelector(".navbar");
 const heroContact = document.querySelector(".hero__contact");
+const btnMenu = document.querySelectorAll(".navbar__link");
 const api = `user_wkxffu2ETbaLHyKAU`;
 emailjs.init("wkxffu2ETbaLHyKAU");
+console.log(btnMenu);
 
 const setSession = (element) => {
   return sessionStorage.setItem("token", element);
@@ -13,7 +17,22 @@ const setSession = (element) => {
 const getSession = () => {
   return sessionStorage.getItem("token");
 };
-
+menuBars.addEventListener("click", () => {
+  if (!menu.classList.contains("show")) {
+    menuBars.className = `fa-solid fa-xmark icon-bars`;
+  } else {
+    menuBars.className = `fa-solid fa-bars icon-bars`;
+  }
+  menu.classList.toggle("show");
+});
+btnMenu.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
+      menuBars.className = `fa-solid fa-bars icon-bars`;
+    }
+  });
+});
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log(allValid(inputName, inputEmail, inputMensagge));
@@ -34,8 +53,12 @@ form.addEventListener("submit", (e) => {
         heroContact
       );
     } else {
-      createAlert("Mensaje Enviado ✅", heroContact);
-      createAlert("Error, Intenta más tarde ❌", heroContact);
+      // createAlert("Mensaje Enviado ✅", heroContact);
+      createAlert(
+        "Ya has enviado un mensaje intenta más tarde ❌",
+        heroContact
+      );
+      // createAlert("Error, Intenta más tarde ❌", heroContact);
 
       // emailjs.sendForm(serviceId, templateId, form).then(
       //   function () {
