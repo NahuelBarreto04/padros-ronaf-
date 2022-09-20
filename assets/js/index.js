@@ -7,6 +7,7 @@ const menuBars = document.querySelector(".icon-bars");
 const menu = document.querySelector(".navbar");
 const heroContact = document.querySelector(".hero__contact");
 const btnMenu = document.querySelectorAll(".navbar__link");
+const animationText = document.querySelector(".heading__animation");
 const api = `user_wkxffu2ETbaLHyKAU`;
 emailjs.init("wkxffu2ETbaLHyKAU");
 console.log(btnMenu);
@@ -17,18 +18,22 @@ const setSession = (element) => {
 const getSession = () => {
   return sessionStorage.getItem("token");
 };
+
 menuBars.addEventListener("click", () => {
-  if (!menu.classList.contains("show")) {
+  menu.classList.toggle("show");
+  if (menu.classList.contains("show")) {
+    menu.classList.remove("hidden");
     menuBars.className = `fa-solid fa-xmark icon-bars`;
   } else {
+    menu.classList.add("hidden");
     menuBars.className = `fa-solid fa-bars icon-bars`;
   }
-  menu.classList.toggle("show");
 });
 btnMenu.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (menu.classList.contains("show")) {
       menu.classList.remove("show");
+      menu.classList.add("hidden");
       menuBars.className = `fa-solid fa-bars icon-bars`;
     }
   });

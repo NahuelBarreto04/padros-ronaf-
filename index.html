@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Padros</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -13,28 +12,31 @@
 </head>
 
 <body>
-    <div class="wrap__heading">
-        <header class="header">
-            <div class="logo">
-                <span class="logo__span">Padros</span>
+    <header class="header">
+        <div class="logo">
+            <span class="logo__span">Padrós</span>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="#contentInfo" class="navbar__link">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a href="#productsImages" class="navbar__link">productos</a></li>
+                <li class="navbar__item"><a href="#contact" class="navbar__link">Contactanos</a></li>
+                <li class="navbar__item"><a href="#location" class="navbar__link">Ubicación</a></li>
+            </ul>
+        </nav>
+        <div class="burguer-container">
+            <i class="fa-solid fa-bars icon-bars"></i>
+        </div>
+    </header>
+    <section class="hero__heading">
+        <div class="heading__animation-container fadeInUp  animated ">
+            <div class="headeading__img-container ">
+                <img class="heading__img" src="https://via.placeholder.com/300" alt="" srcset="">
             </div>
-            <nav class="navbar">
-                <ul class="navbar__menu">
-                    <li class="navbar__item"><a href="#contentInfo" class="navbar__link">Sobre Nosotros</a></li>
-                    <li class="navbar__item"><a href="#productsImages" class="navbar__link">productos</a></li>
-                    <li class="navbar__item"><a href="#contact" class="navbar__link">Contactanos</a></li>
-                    <li class="navbar__item"><a href="#location" class="navbar__link">Ubicación</a></li>
-                </ul>
-            </nav>
-            <div class="burguer-container">
-                <i class="fa-solid fa-bars icon-bars"></i>
-            </div>
-        </header>
-        <section class="hero__heading">
-
-        </section>
-    </div>
-
+            <h1 class="heading__animation">Panadería Artesanal</h1>
+            <h2 class="heading__animation">Desde 1950</h2>
+        </div>
+    </section>
     <main class="main">
         <section class="hero">
             <article class="article-content" id="contentInfo">
@@ -186,6 +188,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/animation.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 
