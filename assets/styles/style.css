@@ -71,17 +71,9 @@ li {
 
 
 
-/* .wrap__heading {
-    background: url(/assets/images/mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg) no-repeat;
-    background-size: cover;
-    backdrop-filter: opacity(0);
-    animation: fadeIn 3s;
-    overflow: none;
-} */
-
 .hero__heading {
     background-size: cover;
-    height: calc(100vh - 6rem);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,12 +184,14 @@ li {
 }
 
 .article__image {
-    background: url(/assets/images/about__us__pan.jpg);
+    background: url(/assets/images/bakery.jpg);
     width: 50%;
     image-rendering: optimizeSpeed;
     display: flex;
     align-items: flex-end;
     justify-content: end;
+    background-size: cover;
+
 }
 
 .article__image--bread {
@@ -534,11 +528,25 @@ li {
     .location-content__text {
         font-size: 2.5rem;
     }
+
+    .hero__contact,
+    .hero__location {
+        min-height: 70rem;
+    }
+
+    .hero__heading {
+        min-height: 50rem;
+    }
+
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
     .article-content__title {
         font-size: 2.5rem;
+    }
+
+    .hero__heading {
+        min-height: 50rem;
     }
 
     .article-content__text {
@@ -549,6 +557,11 @@ li {
     .location__article {
         flex-direction: column;
         height: 90%;
+    }
+
+    .hero__contact,
+    .hero__location {
+        min-height: 70rem;
     }
 
     .location__map {
@@ -643,11 +656,11 @@ li {
         display: block;
     }
 
-    .product__image2{
+    .product__image2 {
         display: none;
     }
 
-    .heading__img-container{
+    .heading__img-container {
         width: 30rem;
     }
 }
@@ -659,6 +672,14 @@ li {
         z-index: 3;
     }
 
+    .hero__heading {
+        min-height: 50rem;
+    }
+
+    .hero__contact,
+    .hero__location {
+        min-height: 70rem;
+    }
 
     .icon-bars {
         font-size: 2rem;
@@ -754,7 +775,7 @@ li {
         margin: 0 0 1rem 0;
     }
 
-    .heading__img-container{
+    .heading__img-container {
         width: 30rem;
     }
 
@@ -790,4 +811,3 @@ li {
         gap: 5rem;
     }
 }
-
