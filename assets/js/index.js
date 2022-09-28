@@ -10,7 +10,6 @@ const btnMenu = document.querySelectorAll(".navbar__link");
 const animationText = document.querySelector(".heading__animation");
 const api = `user_wkxffu2ETbaLHyKAU`;
 emailjs.init("wkxffu2ETbaLHyKAU");
-console.log(btnMenu);
 
 const setSession = (element) => {
   return sessionStorage.setItem("token", element);
@@ -40,8 +39,6 @@ btnMenu.forEach((btn) => {
 });
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(allValid(inputName, inputEmail, inputMensagge));
-  console.log(mailValid(inputEmail));
   if (!allValid(inputName, inputEmail, inputMensagge)) {
     return (
       (lengthError(inputName),
